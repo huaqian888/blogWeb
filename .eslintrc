@@ -1,0 +1,74 @@
+{
+	"env": {
+		"browser": true,
+		"es2020": true,
+		"node": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react-hooks/recommended",
+		"prettier",
+		"plugin:react/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react-refresh",
+		"react",
+		"@typescript-eslint",
+		"react-hooks",
+		"simple-import-sort",
+		"import",
+		"prettier"
+	],
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"prettier/prettier": [
+			"error",
+			{},
+			{
+				"usePrettierrc": false
+			}
+		],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-var-requires": 0,
+		"import/first": "error",
+		"import/newline-after-import": ["error", { "count": 1 }],
+		"import/no-duplicates": "error",
+		"react/prop-types": "off",
+		"simple-import-sort/exports": "error",
+		"simple-import-sort/imports": [
+			"error",
+			{
+				"groups": [
+					["^\\u0000"],
+					["^react$", "^@?\\w"],
+					["^[^.]"],
+					[
+						// ../whatever/
+						"^\\.\\./(?=.*/)",
+						// ../
+						"^\\.\\./",
+						// ./whatever/
+						"^\\./(?=.*/)",
+						// Anything that starts with a dot
+						"^\\.",
+						// .html are not side effect imports
+						"^.+\\.html$"
+					],
+					["^(./|../).*.s?css$"]
+				]
+			}
+		]
+	}
+}
