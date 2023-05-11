@@ -31,13 +31,13 @@
 	],
 	"rules": {
 		"react/react-in-jsx-scope": "off",
-		"prettier/prettier": [
-			"error",
-			{},
-			{
-				"usePrettierrc": false
-			}
-		],
+		// "prettier/prettier": [
+		// 	"error",
+		// 	{},
+		// 	{
+		// 		"usePrettierrc": false
+		// 	}
+		// ],
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
